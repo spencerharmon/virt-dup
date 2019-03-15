@@ -1,0 +1,3 @@
+pyyml==3.13
+libvirt-python==5.0.0
+croniter

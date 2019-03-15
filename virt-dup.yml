@@ -1,0 +1,28 @@
+---
+#Throughout this config, default values are commented.
+#Defines the connection type, address, and port for libvirt connection
+#libvirt-uri: qemu+tcp://localhost/system:16509
+
+# If using polkit or SASL auth, uncomment and set the username and password
+#libvirt-username:
+#libvirt-password:
+
+# Set to true if using a socket-based connection. uri and auth settings are
+# not used when libvirt-socket is True. Requires read/write access to libvirt
+# unix socket, see unix_sock_group and unix_sock_perms in libvirtd.conf
+#libvirt-socket: False
+
+#Define duplicity-related settings:
+duplicity-backends:
+
+#Path for staging. Disk images get copied here before being passed to duplicity
+staging-area: /home/spencer/virt-dup
+
+###############################################################################
+####                             Job Defaults                              ####
+###############################################################################
+depth: 0
+default-schedule: "31 * * * *"
+
+
+...
