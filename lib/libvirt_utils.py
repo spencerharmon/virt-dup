@@ -159,7 +159,7 @@ class SnapshotManager(object):
         except NoSnapshot:
             pass
         else:
-            raise SnapshotExists
+            raise SnapshotExists(self.job['uuid'])
         self.domxml.domain.snapshotCreateXML(
             self.gen_snapshot_xml(),
             libvirt.VIR_DOMAIN_SNAPSHOT_CREATE_ATOMIC | libvirt.VIR_DOMAIN_SNAPSHOT_CREATE_DISK_ONLY)

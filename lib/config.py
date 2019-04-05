@@ -1,5 +1,7 @@
 import yaml
-import os
+import logging
+
+logging.basicConfig(format='%(asctime)s %(levelname)s %(module)s %(threadName)s %(funcName)s "%(message)s"')
 
 
 class Config(object):
@@ -49,7 +51,6 @@ class Config(object):
         except:
             self.default_schedule = "0 0 * * *"
 
-
-        print(config)
+        logging.info(f"Loaded options from virt-dup.yml: {config}")
 
 

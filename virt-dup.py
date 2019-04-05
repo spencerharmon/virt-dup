@@ -4,8 +4,10 @@ from lib.config import Config
 from pprint import pprint
 import libvirt
 from lib.qemu_utils import img_info
+import logging
 
 #config_path = "/etc/virt-dup.yml"
+
 config_path = "/home/spencer/git-repos/virt-dup/virt-dup.yml"
 
 config = Config(config_path)
